@@ -13,11 +13,6 @@ const User = props => {
     useEffect(()=>{
         userInfo(props.url);
     }, [])
-    console.log(userData)
-
-      
-      
-      
 
     return(
     <div className="user">
