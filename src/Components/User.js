@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const User = props => {
     const [userData, setUserData] = useState({})
-    const userInfo = async (url)=> {
+    const getUserData = async (url)=> {
         await fetch(url)
         .then(res=> res.json())
         .then(user => {
@@ -11,7 +11,7 @@ const User = props => {
         .catch(err=>console.log(err))
       } 
     useEffect(()=>{
-        userInfo(props.url);
+        getUserData(props.url);
     }, [])
 
     return(
